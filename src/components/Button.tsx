@@ -7,7 +7,7 @@ export default function Button() {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     try {
-      if (process.env.NEXT_PUBLIC_FIREBASE_DOCUMTENT_ID) {
+      if (process.env.NEXT_PUBLIC_FIREBASE_DOCUMENT_ID) {
         const docRef = await addDoc(collection(db,  process.env.NEXT_PUBLIC_FIREBASE_DOCUMTENT_ID ?? ""), {
           name: "Joe"
         });
